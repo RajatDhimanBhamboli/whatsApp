@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+  
+    height: 100vh;
+    background-color: #111b21;
+    width: 65vh;
+    border: 0.001px solid #111b21;
+    /* border: 1px  0pxsolid rgb(194, 181, 181) ; */
+
+}
+::-webkit-scrollbar {
+    width: 5px;  /* Vertical scrollbar ki width kam karega */
+    height: 5px; 
+    border: none;/* Horizontal scrollbar ki height kam karega */
+  }

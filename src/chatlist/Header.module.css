@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-color: #111b21;
+    height: 33vh;
+    
+}
+.text{
+    color: white;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 12px;
+
+}
+.text h1{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.emoji{
+    padding-left: 80px;
+    width: 150px;
+    margin-left: 90px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2px;
+    color: rgb(66, 71, 76);
+}
+.inputdiv{
+    width: 90%;
+    background-color:#242f37;
+    border-radius: 6px;
+    margin-left: 10px;
+    padding-left: 15px;
+    display: flex;
+    color: #bdc3c7;
+    margin-top: 15px;
+}
+.btn{
+    color: #bdc3c7;
+    background-color:#242f37;
+    border: none;
+    padding-top: 5px;;
+
+}
+.input{
+    color: #bdc3c7;
+    border: none;
+    background-color:#242f37;
+    width: 80%;
+    padding-left: 24px;
+    font-size: 15px;
+    
+}
+.input:focus {
+    outline: none; 
+  }
+.detail{
+    margin-top: 5px;
+    background-color:#111b21;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+.btn{
+    color:#bdc3c7;
+    background-color: #242f37;
+    border: none;
+    border-radius: 20px ;
+    text-align: center;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-size: 14px;
+    font-weight: lighter;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn:hover{
+    color: #059f08;
+    cursor: pointer;
+    
+}
+.emoji{
+    cursor: pointer;
+
+}
+.popup{
+    background-color: #233138;
+    position: absolute;
+    top: 45px;
+    left: 190px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #bdc3c7;
+    
+    border-radius: 5px;
+    
+}
+
+.lists{
+    list-style: none;
+    padding: 10px;
+    font-size: 14px;
+}
+.lists:hover{
+    cursor: pointer;
+    background-color:#747c81;
+}
+.archive{
+    
+    height: 40px;
+    padding-left: 75px;
+    display: flex;
+    gap: 20px;
+    border-top:0.5px solid  #282d30;
+    border-bottom: 0.5px solid  #282d30;
+   
+}
+.icon{
+    padding-top: 6px;
+    cursor: pointer;
+}
+.archbtn{
+   background-color: #111b21;
+    border: none;
+    color: white;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}

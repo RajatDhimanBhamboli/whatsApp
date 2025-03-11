@@ -1,0 +1,24 @@
+.chatbox {
+  height: 66%;
+  overflow-y: auto;  
+  overflow-x: hidden; 
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.noresult {
+  color: white;
+  font-size: 25px;
+  padding: 50px;
+}

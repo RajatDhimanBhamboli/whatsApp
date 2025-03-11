@@ -1,0 +1,31 @@
+.container1{
+  
+    height: 100vh;
+    background-color: #111b21;
+    width: 100vh;
+    border: 0.001px solid #111b21;
+    /* border: 1px  0pxsolid rgb(194, 181, 181) ; */
+   
+}
+
+.container{
+    height: 9.6vh;
+}
+.photo{
+    padding-top: 50px;
+    height: 100%;
+    background-image: url(../assets/communities.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.text{
+    color: white;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 12px;
+
+}
+.text h1{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
