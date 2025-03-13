@@ -79,7 +79,7 @@ function SignUp() {
         <p className={styles.loginText}>
           Already have an account? <a href="/login">Login</a>
         </p>
-      </div>
+      </div>  
     </div>
   );
 }

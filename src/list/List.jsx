@@ -22,9 +22,9 @@ function List({contactinfo}) {
         <div className={styles.namedatemessage}>
           <div className={styles.namedate}>
             <div className={styles.name}>{contactinfo.username}</div>
-            <div className={styles.date}>{time}</div>
+            {/* <div className={styles.date}>{time}</div> */}
           </div>
-          <div className={styles.message}>{contactinfo.msg}</div>
+          {/* <div className={styles.message}>{contactinfo.msg}</div> */}
         </div>
       </div>
        </>

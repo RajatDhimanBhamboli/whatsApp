@@ -5,6 +5,9 @@ import Login from '../loginPage/Login';
 import { useNavigate } from "react-router-dom";
 import App from '../App';
 import style from '../authenctication/Auth.module.css'
+import Checkemail from '../reset password/Checkemail';
+import Otp from '../reset password/Otp';
+import Password from '../reset password/Password';
 function Auth() {
   const [isauth, setIsAuth] = useState(false);
   const [userid,setuserid]=useState("");
@@ -77,6 +80,9 @@ function Auth() {
   return (
     <Routes>
       <Route path="/" element={<SignUp /> } />
+      <Route path="/Otp" element={<Otp /> } />
+      <Route path="/Password" element={<Password /> } />
+      <Route path="/forgot" element={<Checkemail /> } />
       <Route path="/login" element={<Login setIsAuth={setIsAuth}/> } />
       <Route path="/app" element={isauth ? <App  userid={userid} setIsAuth={setIsAuth} dp={dp} setdp={setdp} name={name} isauth={isauth}/> : <Login setIsAuth={setIsAuth} />} />
     </Routes>

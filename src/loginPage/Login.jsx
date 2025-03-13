@@ -65,7 +65,9 @@ const Login = ({setIsAuth}) => {
             Login
           </button>
         </form>
+         <a href="/forgot">forgot Password</a>
       </div>
+      
     </div>
   );
 };
