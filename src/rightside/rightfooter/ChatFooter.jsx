@@ -129,7 +129,7 @@ import styles from "./ChatFooter.module.css";
 import { UserContext } from "../../App";
 import Photodata from "./Photodata";
 
-function ChatFooter({ click, setclick }) {
+function ChatFooter({ click, setclick ,setphototype}) {
   const { selectid, userid, socket, setmsg } = useContext(UserContext);
   const [value, setvalue] = useState("");
   const [sticker, setsticker] = useState(false);
@@ -240,7 +240,7 @@ function ChatFooter({ click, setclick }) {
           file={selectfile}
           setphoto={setphoto}
           setclick={setclick}
-
+          setphototype={setphototype}
         />
       ) : (
         <></>

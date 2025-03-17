@@ -50,7 +50,7 @@ import { UserContext } from "../../App";
 import Chats from "../Chats";
 import Chats2 from "../Chats2";
 
-function Mid({ click, setclick, setonline, isopen }) {
+function Mid({ click, setclick, setonline, isopen ,phototype}) {
   const { selectid, userid, socket, msg, setmsg, settick, name, setrealdata ,setusers} =
     useContext(UserContext);
 
@@ -136,6 +136,8 @@ function Mid({ click, setclick, setonline, isopen }) {
             setclick={setclick}
             file={item.file}
             seen={item.seen}
+            phototype={phototype}
+            media={item.media}
           />
         ) : (
           <Chats
@@ -147,6 +149,7 @@ function Mid({ click, setclick, setonline, isopen }) {
             click={click}
             setclick={setclick}
             file={item.file}
+            media={item.media}
           />
         );
       })}

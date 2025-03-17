@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import style from "../../rightside/rightfooter/Photodata.module.css";
 import { UserContext } from "../../App";
 
-function Photodata({ photo, file, setphoto, setclick }) {
+function Photodata({ photo, file, setphoto, setclick,setphototype }) {
   const { selectid, userid,socket } = useContext(UserContext);
   async function send() {
     if (!file || !socket) return;
@@ -20,7 +20,8 @@ function Photodata({ photo, file, setphoto, setclick }) {
 
       if (response.ok) {
         const data=await response.json();
-        console.log(data);
+        console.log(data.mimetype);
+        setphototype(data.mimetype);
         const messageData = {
           sender: userid,
           receiver: selectid,

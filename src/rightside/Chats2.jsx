@@ -4,10 +4,21 @@ import Chatclick from "../rightclick/chatclick.jsx";
 import Photoshow from "../photoshow/Photoshow.jsx";
 import { UserContext } from "../App.jsx";
 
-function Chats2({ message, time, id, click, setclick, file, seen }) {
+function Chats2({
+  message,
+  time,
+  id,
+  click,
+  setclick,
+  file,
+  seen,
+  phototype,
+  media,
+}) {
+  console.log(media, "fve");
   const [clickd, setClickd] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const[show,setshow]=useState(false);
+  const [show, setshow] = useState(false);
 
   function onRightClick(e) {
     e.preventDefault();
@@ -32,24 +43,33 @@ function Chats2({ message, time, id, click, setclick, file, seen }) {
     if (y < 0) y = 10;
 
     setPosition({ x, y });
-    setClickd((pre)=>!pre);
+    setClickd((pre) => !pre);
   }
-  
 
   return (
     <div
       className={styles.bddadiv}
-      onClick={(e) =>{ 
-        {file&&setshow((pre)=>!pre);}
+      onClick={(e) => {
+        {
+          file && setshow((pre) => !pre);
+        }
       }}
       onContextMenu={onRightClick}
     >
       {file ? (
-        <img
-          src={`http://localhost:8000/uploads/msgdata/${file}`}
-          alt="hello"
-          className={styles.file}
-        />
+        media == "video" ? (
+          <video
+            className={styles.video}
+            src={`http://localhost:8000/uploads/msgdata/${file}`}
+          >
+          </video>
+        ) : (
+          <img
+            src={`http://localhost:8000/uploads/msgdata/${file}`}
+            alt="hello"
+            className={styles.file}
+          />
+        )
       ) : (
         <div className={styles.data}>{message}</div>
       )}
@@ -57,14 +77,14 @@ function Chats2({ message, time, id, click, setclick, file, seen }) {
         {time}
         {seen ? (
           <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="20px"
-          viewBox="0 -960 960 960"
-          width="20px"
-          fill="#2887ca"
-        >
-          <path d="M268-240 42-466l57-56 170 170 56 56-57 56Zm226 0L268-466l56-57 170 170 368-368 56 57-424 424Zm0-226-57-56 198-198 57 56-198 198Z" />
-        </svg>
+            xmlns="http://www.w3.org/2000/svg"
+            height="20px"
+            viewBox="0 -960 960 960"
+            width="20px"
+            fill="#2887ca"
+          >
+            <path d="M268-240 42-466l57-56 170 170 56 56-57 56Zm226 0L268-466l56-57 170 170 368-368 56 57-424 424Zm0-226-57-56 198-198 57 56-198 198Z" />
+          </svg>
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +98,7 @@ function Chats2({ message, time, id, click, setclick, file, seen }) {
         )}
       </div>
 
-      {clickd && !show&&(
+      {clickd && !show && (
         <Chatclick
           className={styles.hlo}
           x={position.x}
@@ -89,7 +109,7 @@ function Chats2({ message, time, id, click, setclick, file, seen }) {
           setClickd={setClickd}
         />
       )}
-              {show?(<Photoshow file={file}/>):null}
+      {show ? <Photoshow file={file} media={media} /> : null}
     </div>
   );
 }

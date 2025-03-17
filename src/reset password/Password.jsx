@@ -18,10 +18,13 @@ function Password() {
         const response = await fetch(
           "http://localhost:8000/api/auth/Password",
           {
-            method: "GET",
+            method: "POST",
             headers: {
+              "Content-Type": "application/json",
               Authorization: token,
             },
+            body: JSON.stringify({ password: password }),
+    
           }
         );
         const data = await response.json();

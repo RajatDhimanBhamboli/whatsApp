@@ -12,6 +12,7 @@ function Rightmain() {
   const{online,setonline,socket,selectid,userid}=useContext(UserContext)
   const [click, setclick] = useState(false);
   const [isopen, setIsopen] = useState(false);
+  const [phototype, setphototype] = useState("");
   
 
  
@@ -51,8 +52,8 @@ function Rightmain() {
   return (
     <div className={styles.rightmain}>
       <Header isopen={isopen} setIsopen={setIsopen}/>
-      <Mid click={click} setclick={setclick} isopen={isopen}  />
-      <ChatFooter click={click} setclick={setclick} />
+      <Mid click={click} setclick={setclick} isopen={isopen} phototype={phototype} />
+      <ChatFooter click={click} setclick={setclick}  setphototype={setphototype}/>
     </div>
   );
 }
