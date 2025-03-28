@@ -1,14 +1,14 @@
-.bddadiv{
-background-image: url('D:\react2\whatsapp\src\assets\bg.jpg');
-    padding-top: 10px;
-width: 100%;
-height: 75vh;
-overflow-y: scroll;
-overflow-x: hidden;
-display: flex;
+.bddadiv {
+  background-image: url("D:\react2\whatsapp\src\assets\bg.jpg");
+  padding-top: 10px;
+  width: 100%;
+  height: 75vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
 
-flex-direction: column;
+  flex-direction: column;
 }
-.chat2{
-    -ms-flex-align: end;
+.chat2 {
+  -ms-flex-align: end;
 }

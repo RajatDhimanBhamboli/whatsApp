@@ -7,11 +7,9 @@ function Profile() {
   const { userid, dp, setdp, name } = useContext(UserContext);
   const [about, setabout] = useState("I Am Online");
   const [show1, setshow1] = useState(false);
-  function onRightClick(e){
+  function onRightClick(e) {
     e.preventDefault();
-    setshow1(pre=>!pre);
-    
-
+    setshow1((pre) => !pre);
   }
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
@@ -43,7 +41,6 @@ function Profile() {
     setabout(e.target.value);
   }
 
-
   return (
     <div className={style.container1}>
       <div className={style.container}>
@@ -55,11 +52,10 @@ function Profile() {
       <div className={style.photo} onContextMenu={onRightClick}>
         <label htmlFor="dp">
           <img
-          
             src={`http://localhost:8000/uploads/${dp}`}
             width="180px"
             height="180px"
-            alt="Profile"
+            alt=""
           />
         </label>
 
@@ -87,14 +83,13 @@ function Profile() {
             type="text"
             className={style.editable}
             value={about}
-           
             onChange={() => {
               changeabout;
             }}
           />
         </div>
       </div>
-      {show1?(<Photoshow file2={dp} setshow1={setshow1}/>):null}
+      {show1 ? <Photoshow file2={dp} setshow1={setshow1} /> : null}
     </div>
   );
 }

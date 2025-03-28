@@ -1,21 +1,31 @@
-import React, { useContext } from 'react'
-import style from '../discription/Discription.module.css'
-import { UserContext } from '../../../App'
-function Discription({setdiscription}) {
-  console.log(setdiscription,"change"); 
-  const{name,dp,filteredUser}=useContext(UserContext)
+import React, { useContext } from "react";
+import style from "../discription/Discription.module.css";
+import { UserContext } from "../../../App";
+function Discription({ setdiscription }) {
+  const { name, dp, filteredUser } = useContext(UserContext);
   return (
     <div className={style.bigdiv}>
       <div className={style.header}>
-        <button className={style.btn} onClick={()=>{setdiscription(false)}}>×</button>
+        <button
+          className={style.btn}
+          onClick={() => {
+            setdiscription(false);
+          }}
+        >
+          ×
+        </button>
         <div className={style.tittle}>Contact info</div>
       </div>
       <div className={style.main}>
-        <img className={style.photo} src={`http://localhost:8000/uploads/${filteredUser[0]?.dp}`} alt="" />
+        <img
+          className={style.photo}
+          src={`http://localhost:8000/uploads/${filteredUser[0]?.dp}`}
+          alt=""
+        />
         <div className={style.name}>{filteredUser[0]?.username}</div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Discription
+export default Discription;

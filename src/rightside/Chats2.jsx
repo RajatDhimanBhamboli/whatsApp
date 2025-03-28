@@ -15,7 +15,6 @@ function Chats2({
   phototype,
   media,
 }) {
-  console.log(media, "fve");
   const [clickd, setClickd] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [show, setshow] = useState(false);
@@ -61,8 +60,7 @@ function Chats2({
           <video
             className={styles.video}
             src={`http://localhost:8000/uploads/msgdata/${file}`}
-          >
-          </video>
+          ></video>
         ) : (
           <img
             src={`http://localhost:8000/uploads/msgdata/${file}`}

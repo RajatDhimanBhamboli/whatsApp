@@ -3,7 +3,7 @@ import styles from "./Chats.module.css";
 import Chatclick2 from "../rightclick/Chatclick2";
 import Photoshow from "../photoshow/Photoshow.jsx";
 
-function Chats({ message, time, id, click, setclick, file ,media}) {
+function Chats({ message, time, id, click, setclick, file, media }) {
   const [clickd, setclickd] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [show, setshow] = useState(false);
@@ -31,7 +31,7 @@ function Chats({ message, time, id, click, setclick, file ,media}) {
     if (y < 0) y = 10;
 
     setPosition({ x, y });
-    setclickd(pre=>!pre);
+    setclickd((pre) => !pre);
   }
 
   return (
@@ -45,19 +45,18 @@ function Chats({ message, time, id, click, setclick, file ,media}) {
       onContextMenu={onrightclick}
     >
       {file ? (
-              media == "video" ? (
-                <video
-                  className={styles.video}
-                  src={`http://localhost:8000/uploads/msgdata/${file}`}
-                >
-                </video>
-              ) : (
-                <img
-                  src={`http://localhost:8000/uploads/msgdata/${file}`}
-                  alt="hello"
-                  className={styles.file}
-                />
-              )
+        media == "video" ? (
+          <video
+            className={styles.video}
+            src={`http://localhost:8000/uploads/msgdata/${file}`}
+          ></video>
+        ) : (
+          <img
+            src={`http://localhost:8000/uploads/msgdata/${file}`}
+            alt="hello"
+            className={styles.file}
+          />
+        )
       ) : (
         <div className={styles.data}>{message}</div>
       )}
@@ -73,7 +72,7 @@ function Chats({ message, time, id, click, setclick, file ,media}) {
           setclickd={setclickd}
         />
       )}
-      {show ? <Photoshow file={file} media={media}/> : null}
+      {show ? <Photoshow file={file} media={media} /> : null}
     </div>
   );
 }

@@ -1,61 +1,60 @@
-/* Discription.module.css */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .bigdiv {
-    width: 100vw;
-    height: 100vh;
-    background-color:#242f37;
-    color: white;
-    
-    padding-top: 20px;
-    padding-left: 20px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #242f37;
+  color: white;
+
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tittle {
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 10px;
 }
 
 .main {
-    margin-left: 170px;
-    display: flex;
-    display: block;
-    align-items: center;
+  margin-left: 170px;
+  display: flex;
+  display: block;
+  align-items: center;
 }
 
 .photo {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
 
 .name {
-    font-size: 20px;
-    font-weight: 500;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 200px;
+  font-size: 20px;
+  font-weight: 500;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 200px;
 }

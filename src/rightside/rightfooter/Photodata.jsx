@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import style from "../../rightside/rightfooter/Photodata.module.css";
 import { UserContext } from "../../App";
 
-function Photodata({ photo, file, setphoto, setclick,setphototype }) {
-  const { selectid, userid,socket } = useContext(UserContext);
+function Photodata({ photo, file, setphoto, setclick, setphototype }) {
+  const { selectid, userid, socket } = useContext(UserContext);
   async function send() {
     if (!file || !socket) return;
     setphoto(null);
@@ -19,8 +19,7 @@ function Photodata({ photo, file, setphoto, setclick,setphototype }) {
       );
 
       if (response.ok) {
-        const data=await response.json();
-        console.log(data.mimetype);
+        const data = await response.json();
         setphototype(data.mimetype);
         const messageData = {
           sender: userid,
@@ -28,10 +27,7 @@ function Photodata({ photo, file, setphoto, setclick,setphototype }) {
           file: data.newMessage.file,
           createdAt: new Date().toISOString(),
         };
-        console.log(messageData,"l");
-        // socket.emit("sendMessage", messageData);
         setclick((pre) => !pre);
-
       } else {
         console.error(" Error uploading file");
       }
@@ -41,8 +37,7 @@ function Photodata({ photo, file, setphoto, setclick,setphototype }) {
   }
   return (
     <div className={style.bddadiv}>
-      {/* <img src={`http://localhost:8000/uploads/msg/${photo}`} className={style.photo} alt="" /> */}
-      <img src={photo} className={style.photo} alt="" />
+      <img src={photo} className={style.photo} alt="video " />
 
       <button className={style.btn} onClick={send}>
         <svg

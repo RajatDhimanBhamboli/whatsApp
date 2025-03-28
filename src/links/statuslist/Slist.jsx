@@ -1,16 +1,11 @@
 import React from "react";
 import styles from "../statuslist/Slist.module.css";
 import Image from "../../imagecircle/Image";
-function Slist({imagehai}) {
-    console.log("rajatphoto",imagehai)
+function Slist({ imagehai }) {
   return (
     <div className={styles.list}>
       <div className={styles.image}>
-        <Image
-          className={styles.photo}
-          image={imagehai.src}
-        />
-        
+        <Image className={styles.photo} image={imagehai.src} />
       </div>
       <div className={styles.namedatemessage}>
         <div className={styles.name}>{imagehai.name}</div>

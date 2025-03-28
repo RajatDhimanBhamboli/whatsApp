@@ -1,56 +1,49 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    color: black;
-  }
-  
-  .card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
-    color: #333;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    text-align: center;
-    color: black;
-  }
-  
-  .button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  .message {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: green;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3f4950;
+  color: white;
+}
+
+.card {
+  background: #1f303a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #37474f;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background: #00a85a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background: #008069;
+}

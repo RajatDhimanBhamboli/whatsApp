@@ -1,54 +1,52 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-.bddadiv{
-    padding: 9px;
-    background-color: #005c4b;
-    max-width: 400px;
-    max-height: max-content;
-    color: white;
-  
-    
-    border-radius: 8px;
-    border-top-right-radius: 0px;
-    margin-top: 10px;
-   text-align: left;
-   align-self: flex-end;
-   margin-right: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    cursor: pointer;
-    
+.bddadiv {
+  padding: 9px;
+  background-color: #005c4b;
+  max-width: 400px;
+  max-height: max-content;
+  color: white;
+
+  border-radius: 8px;
+  border-top-right-radius: 0px;
+  margin-top: 10px;
+  text-align: left;
+  align-self: flex-end;
+  margin-right: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
 }
-.data{
-    font-size: 17px;
-    font-weight: 300;
-    max-width: 300px;
-    align-self: flex-start;
-  
-    gap: 8px;
-    border-top-right-radius: 0px;
-   overflow-y:visible;
-   word-break: break-word;  /* Long words wrap honge */
-    overflow-wrap: break-word; /* Extra lambi strings wrap hongi */
-    white-space: pre-wrap;  /* New lines preserve hongi */
-}   
-.file{
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 0px;
-    object-fit: contain;
-    margin: 5px;
-    align-self: flex-start;
-    display: block;
+.data {
+  font-size: 17px;
+  font-weight: 300;
+  max-width: 300px;
+  align-self: flex-start;
+
+  gap: 8px;
+  border-top-right-radius: 0px;
+  overflow-y: visible;
+  word-break: break-word; /* Long words wrap honge */
+  overflow-wrap: break-word; /* Extra lambi strings wrap hongi */
+  white-space: pre-wrap; /* New lines preserve hongi */
 }
-.video{
-    max-width: 300px;
-    max-height: 300px;
-    display: block;
+.file {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 0px;
+  object-fit: contain;
+  margin: 5px;
+  align-self: flex-start;
+  display: block;
 }
-.time{
-    font-size: 13px;
-   
-    float: right;
+.video {
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+}
+.time {
+  font-size: 13px;
+
+  float: right;
 }

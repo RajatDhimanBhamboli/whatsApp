@@ -26,7 +26,7 @@
   font-size: 27px;
   border-radius: 14px;
   color: rgb(207, 20, 20);
-  background-color:#111b21;
+  background-color: #111b21;
   border: none;
   margin-top: 10px;
   margin-left: 50px;
@@ -49,7 +49,7 @@
 .p {
   padding-left: 20px;
 }
-.p1{
+.p1 {
   padding-left: 20px;
   font-size: larger;
 }

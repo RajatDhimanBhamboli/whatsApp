@@ -4,28 +4,26 @@ import { useNavigate } from "react-router-dom";
 
 const Checkemail = () => {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Forgot password request for:", email);
-    const response = await fetch('http://localhost:8000/api/auth/checkemail', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email })
-            });
-            if (response.ok) {
-              const data = await response.json();
-              console.log("otp hai",data.otp);
-            alert(data.otp);
-              localStorage.setItem("email",data.token);
-                alert("Email sent successfully");
-                navigate("/Otp");
-                } else {
-                    alert("Error sending email");
-                }
+    const response = await fetch("http://localhost:8000/api/auth/checkemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+    if (response.ok) {
+      const data = await response.json();
+      console.log("otp hai", data.otp);
+      alert(data.otp);
+      localStorage.setItem("email", data.token);
+      navigate("/Otp");
+    } else {
+      alert("Error sending email");
+    }
   };
 
   return (

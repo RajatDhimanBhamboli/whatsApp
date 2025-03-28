@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
 import styles from "./Image.module.css";
 
-function Image({image}) {
+function Image({ image }) {
   return (
-      <img  className={styles.circle} src={`http://localhost:8000/uploads/${image}`}  width="100" />
-    
-  )
+    <img
+      className={styles.circle}
+      src={`http://localhost:8000/uploads/${image}`}
+      width="100"
+    />
+  );
 }
 
-export default Image
+export default Image;

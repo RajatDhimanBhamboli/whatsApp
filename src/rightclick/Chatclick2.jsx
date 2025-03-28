@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import style from '../rightclick/chatclcik.module.css'
-import { UserContext } from '../App'
+import React, { useContext } from "react";
+import style from "../rightclick/chatclcik.module.css";
+import { UserContext } from "../App";
 
-function Chatclick2({x,y,id,click,setclick,setclickd}) {
-  const{name}=useContext(UserContext);
+function Chatclick2({ x, y, id, click, setclick, setclickd }) {
+  const { name } = useContext(UserContext);
   async function deletedata() {
     alert("Clear Chat");
     try {
@@ -18,8 +18,7 @@ function Chatclick2({x,y,id,click,setclick,setclickd}) {
       console.log(data);
       if (response.ok) {
         setclick(!click);
-        setclickd((pre)=>!pre)
-
+        setclickd((pre) => !pre);
       } else {
         console.log(data, "name nahi hai");
       }
@@ -28,12 +27,14 @@ function Chatclick2({x,y,id,click,setclick,setclickd}) {
     }
   }
   return (
-    <div className={style.bddadiv} style={{
-          position: 'absolute',
-          top: y,
-          left: x,
-          
-        }}>
+    <div
+      className={style.bddadiv}
+      style={{
+        position: "absolute",
+        top: y,
+        left: x,
+      }}
+    >
       <ul>
         <li>Reply</li>
         <li>Reply Message</li>
@@ -43,11 +44,10 @@ function Chatclick2({x,y,id,click,setclick,setclickd}) {
         <li>Pin</li>
         <li>Star</li>
         <li>Report</li>
-        <li onClick={()=>deletedata()}
-        >Delete</li>
+        <li onClick={() => deletedata()}>Delete</li>
       </ul>
     </div>
-  )
+  );
 }
 
-export default Chatclick2
+export default Chatclick2;

@@ -1,45 +1,3 @@
-// import React, { useEffect, useState, useContext } from 'react';
-// import style from './Mid.module.css';
-// import { UserContext } from '../../App';
-// import Chats from '../Chats';
-// import Chats2 from '../Chats2';
-
-// function Mid() {
-//     const { selectid, userid } = useContext(UserContext);
-//     const [msg, setmsg] = useState([]);
-
-//     useEffect(() => {
-//         const getmsg = async () => {
-//             if (!selectid) return;
-//             const response = await fetch("http://localhost:8000/api/auth/allmsg", {
-//                 method: "POST",
-//                 headers: {
-//                     "Content-Type": "Application/json"
-//                 },
-//                 body: JSON.stringify({ senderId: userid, receiverId: selectid }) // ✅ Correct IDs send karo
-//             });
-
-//             const data = await response.json();
-//             console.log(data);
-//             setmsg(data);
-//         };
-//         getmsg();
-//     }, [userid, selectid]);
-//     return (
-//         <div className={style.bddadiv}>
-//             {msg?.map((item, index) => {
-//                 if (item.sender === userid) {
-//                     return <Chats2 key={index} className={style.chat2} message={item.text} time={item.createdAt} />;
-//                 } else {
-//                     return <Chats key={index} className={style.chat} message={item.text} time={item.createdAt} />;
-//                 }
-//             })}
-//         </div>
-//     );
-// }
-
-// export default Mid;
-
 import React, { useEffect, useState, useContext, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -50,9 +8,18 @@ import { UserContext } from "../../App";
 import Chats from "../Chats";
 import Chats2 from "../Chats2";
 
-function Mid({ click, setclick, setonline, isopen ,phototype}) {
-  const { selectid, userid, socket, msg, setmsg, settick, name, setrealdata ,setusers} =
-    useContext(UserContext);
+function Mid({ click, setclick, setonline, isopen, phototype }) {
+  const {
+    selectid,
+    userid,
+    socket,
+    msg,
+    setmsg,
+    settick,
+    name,
+    setrealdata,
+    setusers,
+  } = useContext(UserContext);
 
   const messagesEndRef = useRef(null);
   useEffect(() => {
@@ -61,12 +28,9 @@ function Mid({ click, setclick, setonline, isopen ,phototype}) {
 
   useEffect(() => {
     socket.on("receiveMessage", (newMessage) => {
-      console.log("New message received:", newMessage);
       if (newMessage.sender === selectid || newMessage.receiver === selectid) {
-        console.log(newMessage);
         setmsg((prev) => [...prev, newMessage]);
         socket.emit("message-seen", { sender: selectid, receiver: userid });
-        console.log(newMessage._id);
       } else {
         toast(`new message from ${name}`);
       }
@@ -75,7 +39,7 @@ function Mid({ click, setclick, setonline, isopen ,phototype}) {
       socket.off("receiveMessage");
       socket.off("message-seen");
     };
-  }, [userid, selectid, socket,setmsg]);
+  }, [userid, selectid, socket, setmsg]);
 
   useEffect(() => {
     if (selectid) {
@@ -89,7 +53,6 @@ function Mid({ click, setclick, setonline, isopen ,phototype}) {
 
   useEffect(() => {
     socket.on("update-seen", ({ sender, receiver }) => {
-      console.log(msg);
       setmsg((prev) =>
         prev.map((msg) =>
           msg.sender === sender && msg.receiver === receiver
@@ -112,7 +75,6 @@ function Mid({ click, setclick, setonline, isopen ,phototype}) {
         body: JSON.stringify({ senderId: userid, receiverId: selectid }),
       });
       const data = await response.json();
-      console.log(data[0]?.file, "lelelelelllellelelellee");
       setmsg(data);
     };
     getmsg();

@@ -3,15 +3,14 @@ import styles from "./Header.module.css";
 import { UserContext } from "../App";
 import { useContext } from "react";
 function Header() {
-  const { users, userid, searchterm, setsearchterm, name, setname ,setIsAuth} =
+  const { users, userid, searchterm, setsearchterm, name, setname, setIsAuth } =
     useContext(UserContext);
 
   const [isopen, setIsopen] = useState(false);
   const [isopen2, setIsopen2] = useState(false);
 
-  function logout(){
-    console.log("logout");
-    localStorage.removeItem('token');
+  function logout() {
+    localStorage.removeItem("token");
     setIsAuth(false);
     window.location.reload();
   }

@@ -1,7 +1,7 @@
 .chatbox {
   height: 66%;
-  overflow-y: auto;  
-  overflow-x: hidden; 
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

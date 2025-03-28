@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import style from "../rightclick/chatclcik.module.css";
 import { UserContext } from "../App";
 
-function  Chatclick({ x, y, id, click, setclick ,setClickd}) {
+function Chatclick({ x, y, id, click, setclick, setClickd }) {
   const { name } = useContext(UserContext);
   async function deletedata(e) {
     try {
@@ -17,7 +17,7 @@ function  Chatclick({ x, y, id, click, setclick ,setClickd}) {
       console.log(data);
       if (response.ok) {
         setclick(!click);
-        setClickd((pre)=>!pre)
+        setClickd((pre) => !pre);
       } else {
         console.log(data, "name nahi hai");
       }

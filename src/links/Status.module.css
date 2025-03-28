@@ -1,46 +1,41 @@
-.container1{
-    
-    height: 120vh;
-    background-color: #111b21;
-    width: 100vh;
-    border: 0.001px solid #111b21;
-    /* border: 1px  0pxsolid rgb(194, 181, 181) ; */
-   
+.container1 {
+  height: 120vh;
+  background-color: #111b21;
+  width: 100vh;
+  border: 0.001px solid #111b21;
+  /* border: 1px  0pxsolid rgb(194, 181, 181) ; */
 }
 
-.container{
-    margin-top: 20px;
-    height: 9.6vh;
+.container {
+  margin-top: 20px;
+  height: 9.6vh;
 }
-.tittle{
-    font-size: 20px;
-    color: rgba(69, 175, 40, 0.89);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-top: 5px;
-    border-top: 5px solid rgb(79, 76, 76);
-
-
+.tittle {
+  font-size: 20px;
+  color: rgba(69, 175, 40, 0.89);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-top: 5px;
+  border-top: 5px solid rgb(79, 76, 76);
 }
-.text{
-    color: white;
-    display: flex;
-    padding-top: 10px;
-    padding-left: 12px;
-
+.text {
+  color: white;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 12px;
 }
-.text h1{
-    font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.text h1 {
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.emoji{
-    padding-left: 80px;
-    width: 100px;
-    margin-left: 90px;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 2px;
-    color: rgb(66, 71, 76);
+.emoji {
+  padding-left: 30px;
+  width: 100px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2px;
+  color: rgb(66, 71, 76);
 }

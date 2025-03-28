@@ -1,79 +1,74 @@
-.bddadiv{
-    height: 60px;
-    width: 100%;
-    display: flex;
-      background-color: #242f37;
-      border: none;
-      
+.bddadiv {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  background-color: #242f37;
+  border: none;
 }
-.plus{
-    width: 70px;
-    text-align: center;
-    padding-top: 15px;
+.plus {
+  width: 70px;
+  text-align: center;
+  padding-top: 15px;
 }
-.input{
-    background-color: #3b474f;
-    height: 43px;
-    
-    display: flex;
-    width: 54.5vw;
-    border-radius: 18px;
-    margin-top: 15px;
+.input {
+  background-color: #3b474f;
+  height: 43px;
+
+  display: flex;
+  width: 54.5vw;
+  border-radius: 18px;
+  margin-top: 15px;
 }
 input:active {
-    border: none;
-    outline: none; 
-  }
-.sticker{
-    text-align: center;
-    padding-top: 16px;
-    width: 45px;
+  border: none;
+  outline: none;
 }
-input{
- width: 88%;
- height: 40px;
- margin-top: 3px;
- background: none;
- border: none;
- margin-left: 5px;
- font-size: 19px;
- outline: none;
- border: none;
- color: white;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- font-size: 15px;
- 
+.sticker {
+  text-align: center;
+  padding-top: 16px;
+  width: 45px;
 }
-.mic{
-    text-align: center;
-    padding-top: 17px;
-    padding-left: 24px;
-    background-color:#242f37;
-    border: none;
+input {
+  width: 88%;
+  height: 40px;
+  margin-top: 3px;
+  background: none;
+  border: none;
+  margin-left: 5px;
+  font-size: 19px;
+  outline: none;
+  border: none;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+.mic {
+  text-align: center;
+  padding-top: 17px;
+  padding-left: 24px;
+  background-color: #242f37;
+  border: none;
+}
+.stickerdata {
+  border: 3px solid #121516;
+  max-width: 300px;
 
+  height: 200px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  bottom: 50px;
+  border-radius: 5px;
+  overflow-y: scroll;
+  background-color: #242f37;
 }
-.stickerdata{
-    border: 3px solid #121516;
-    max-width: 300px;
-    
-    height: 200px;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    bottom: 50px;
-    border-radius: 5px;
-    overflow-y: scroll;
-    background-color:#242f37;
-    
+.lists {
+  list-style: none;
+  font-size: 23px;
+  padding-left: 5px;
+  cursor: pointer;
 }
-.lists{
-    list-style: none;
-    font-size: 23px;
-    padding-left: 5px;
-    cursor: pointer;
-
-}
-.send{
-    border: none;
+.send {
+  border: none;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
-const Login = ({setIsAuth}) => {
+const Login = ({ setIsAuth }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -22,14 +22,13 @@ const Login = ({setIsAuth}) => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("login successful! Redirecting to dfve page...");
-        localStorage.setItem("token",data.token);
-        navigate("/App");
+        alert("login successful! ");
+        localStorage.setItem("token", data.token);
+        navigate("/app");
         setIsAuth(true);
       } else {
         alert(data.message || "Signup failed!");
         setIsAuth(false);
-        setEmail("");
         setPassword("");
       }
     } catch (error) {
@@ -41,6 +40,7 @@ const Login = ({setIsAuth}) => {
   return (
     <div className={styles.container}>
       <div className={styles.loginBox}>
+        <h1 className={styles.h1}>Welcone to TalkBridge</h1>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
@@ -65,9 +65,10 @@ const Login = ({setIsAuth}) => {
             Login
           </button>
         </form>
-         <a href="/forgot">forgot Password</a>
+        <a className={styles.h2} href="/forgot">
+          forgot Password
+        </a>
       </div>
-      
     </div>
   );
 };

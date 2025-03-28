@@ -1,72 +1,73 @@
-.container1{
-  
-    height: 100vh;
-    background-color: #111b21;
-    width: 80vh;
-    border: 0.001px solid #111b21;
-    /* border: 1px  0pxsolid rgb(194, 181, 181) ; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+.container1 {
+  height: 100vh;
+  background-color: #111b21;
+  width: 100vh;
+  border: 0.001px solid #111b21;
+  /* border: 1px  0pxsolid rgb(194, 181, 181) ; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container{
-    height: 9.6vh;
+.container {
+  height: 9.6vh;
 }
-.text{
-    color: white;
-    display: flex;
-    padding-top: 10px;
-    padding-left: 12px;
-
+.text {
+  color: white;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 12px;
 }
-.text h1{
-    font-size: 25px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.text h1 {
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.emoji{
-    padding-left: 80px;
-    width: 60px;
-    margin-left: 90px;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 2px;
-    color: rgb(66, 71, 76);
+.emoji {
+  padding-left: 80px;
+  width: 60px;
+  margin-left: 90px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2px;
+  color: rgb(66, 71, 76);
 }
-.image{
-    display: none;
-    margin-top: 30px;
+.image {
+  display: none;
+  margin-top: 30px;
 }
-img{
-    border-radius: 50%;
-    
-    margin-left: 100px;
+.photo {
+  width: 180px;
+  height: 180px;
+  background-color: azure;
+  border-radius: 50%;
+  margin-left: 100px;
+}
+img {
+  border-radius: 50%;
 }
 .profil {
-        width: 320px;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 .section {
-    margin-bottom: 20px;
-    border: 2px solid #54c87f;
-    border-radius: 10px;
-    
+  margin-bottom: 20px;
+  border: 2px solid #54c87f;
+  border-radius: 10px;
 }
 .tittle {
-    color: #54c87f;
-    font-size: 16px;
-    margin-bottom: 5px;
+  color: #54c87f;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 .editable {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    width: 100%;
-    padding: 5px 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  padding: 5px 0;
 }
 .editable:focus {
-    outline: none;
-    border-bottom: 1px solid #25d366;
+  outline: none;
+  border-bottom: 1px solid #25d366;
 }

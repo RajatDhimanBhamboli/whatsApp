@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  
+import { useNavigate } from "react-router-dom";
 import styles from "../signupPage/SignUp.module.css";
 
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,15 +19,15 @@ function SignUp() {
         body: JSON.stringify({
           name,
           email,
-          password
-        })
+          password,
+        }),
       });
 
-      const data = await response.json(); 
+      const data = await response.json();
 
       if (response.ok) {
         alert("Signup successful! Redirecting to login page...");
-        navigate("/login"); 
+        navigate("/login");
       } else {
         alert(data.message || "Signup failed!");
       }
@@ -40,7 +40,8 @@ function SignUp() {
   return (
     <div className={styles.container}>
       <div className={styles.signupBox}>
-        <h2>Sign Up</h2>
+        <h1 className={styles.h1}>Welcone to TalkBridge</h1>
+        <h2 className={styles.h2}>Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
             <label>Name</label>
@@ -77,9 +78,12 @@ function SignUp() {
           </button>
         </form>
         <p className={styles.loginText}>
-          Already have an account? <a href="/login">Login</a>
+          Already have an account?{" "}
+          <a className={styles.h2} href="/login">
+            Login
+          </a>
         </p>
-      </div>  
+      </div>
     </div>
   );
 }

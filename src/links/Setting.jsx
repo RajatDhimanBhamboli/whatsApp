@@ -3,11 +3,22 @@ import style from "../links/Setting.module.css";
 import Image from "../imagecircle/Image";
 import { UserContext } from "../App";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Setting() {
   const { setIsAuth, dp, name, userid, socket } = useContext(UserContext);
-  function logout() {
-    localStorage.removeItem("token");
+  const navigate = useNavigate();
+  async function logout() {
+    const token = localStorage.getItem("token");
+    await fetch("http://localhost:8000/api/auth/logout", {
+      method: "POST",
+      headers: { Authorization: token },
+    });
     setIsAuth(false);
+    localStorage.removeItem("token");
+    alert("Logged out");
+    navigate("/login");
+
     window.location.reload();
   }
   return (

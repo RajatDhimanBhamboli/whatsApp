@@ -43,7 +43,7 @@ function App({ userid, setIsAuth, dp, setdp, name, isauth }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ userid: userid }),
-        }); 
+        });
         const data = await response.json();
         if (response.ok) {
           setusers(data);
@@ -74,7 +74,6 @@ function App({ userid, setIsAuth, dp, setdp, name, isauth }) {
   };
 
   const filteredUser = users?.filter((user1) => user1._id == selectid);
-  console.log("hellosedrfghjkljkcgxfzxf", filteredUser);
   return (
     <UserContext.Provider
       value={{

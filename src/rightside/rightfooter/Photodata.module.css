@@ -1,31 +1,29 @@
-.bddadiv{
-    background-color: #005c4b;
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    bottom: 50px;
-    left: 450px;
-    border-radius: 7px;
-    object-fit: contain;
+.bddadiv {
+  background-color: #005c4b;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  bottom: 50px;
+  left: 450px;
+  border-radius: 7px;
+  object-fit: contain;
 }
-.photo{
-    height: 193px;
-    width: 230px;
-    border-radius: 0px;
-    position: absolute;
-    left: -90px;
-    top: 10px;
-    border-radius: 7px;
-
+.photo {
+  height: 193px;
+  width: 230px;
+  border-radius: 0px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border-radius: 7px;
 }
-.btn{
-    position: absolute;
-    top: 210px;
-    right: 10px;
-    background-color: #005c4b;
-    border: none;
+.btn {
+  position: absolute;
+  top: 210px;
+  right: 10px;
+  background-color: #005c4b;
+  border: none;
 }
-.send{
-    border: none;
-    
+.send {
+  border: none;
 }
