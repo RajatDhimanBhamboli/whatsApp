@@ -21,7 +21,7 @@ function Header({ isopen, setIsopen }) {
   async function deletekardo() {
     if (!userid) return;
     try {
-      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/deletemsg", {
+      const response = await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/deletemsg", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

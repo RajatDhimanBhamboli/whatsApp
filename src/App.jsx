@@ -17,7 +17,7 @@ import Discription from "./rightside/rightheader/discription/Discription.jsx";
 import useGlobalStore from "./store.js";
 
 export const UserContext = createContext();
-const socket = io(import.meta.VITE_BACKEND_URL);
+const socket = io(import.meta.env.VITE_BACKEND_URL);
 
 function App({ userid, setIsAuth, dp, setdp, name, isauth }) {
   const users = useGlobalStore((state) => state.users);

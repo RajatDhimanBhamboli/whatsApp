@@ -10,8 +10,9 @@ function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(import.meta.env.VITE_BACKEND_URL)
     try {
-      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/signup", {
+      const response = await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -22,7 +23,7 @@ function SignUp() {
           password,
         }),
       });
-
+      console.log(response)
       const data = await response.json();
 
       if (response.ok) {

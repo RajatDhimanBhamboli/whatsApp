@@ -10,7 +10,7 @@ function Setting() {
   const navigate = useNavigate();
   async function logout() {
     const token = localStorage.getItem("token");
-    await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/logout", {
+    await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/logout", {
       method: "POST",
       headers: { Authorization: token },
     });

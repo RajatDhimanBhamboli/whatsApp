@@ -6,7 +6,7 @@ function Chatclick({ x, y, id, click, setclick, setClickd }) {
   const { name } = useContext(UserContext);
   async function deletedata(e) {
     try {
-      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/delete", {
+      const response = await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/delete", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

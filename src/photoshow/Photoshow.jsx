@@ -13,7 +13,7 @@ function Photoshow({ file, file2, setshow1, media }) {
         media == "image" ? (
           <img
             className={style.photo}
-            src={import.meta.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
+            src={import.meta.env.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
             alt=""
           />
         ) : (
@@ -21,7 +21,7 @@ function Photoshow({ file, file2, setshow1, media }) {
             className={style.photo}
             controls
             autoPlay
-            src={import.meta.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
+            src={import.meta.env.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
             alt=""
           />
         )
@@ -30,7 +30,7 @@ function Photoshow({ file, file2, setshow1, media }) {
       {file2 ? (
         <img
           className={style.photo}
-          src={import.meta.VITE_BACKEND_URL+`/uploads/${file2}`}
+          src={import.meta.env.VITE_BACKEND_URL+`/uploads/${file2}`}
           alt=""
         />
       ) : null}

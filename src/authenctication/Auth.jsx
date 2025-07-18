@@ -24,7 +24,7 @@ function Auth() {
         return;
       }
       try {
-        const response = await fetch(VITE_BACKEND_URL+"/api/auth/check-auth", {
+        const response = await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/check-auth", {
           method: "GET",
           headers: {
             Authorization: token,
@@ -53,7 +53,7 @@ function Auth() {
     if (!userid) return;
     const getname = async () => {
       try {
-        const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/getdata", {
+        const response = await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/getdata", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

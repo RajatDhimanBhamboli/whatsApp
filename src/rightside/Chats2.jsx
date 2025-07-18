@@ -59,11 +59,11 @@ function Chats2({
         media == "video" ? (
           <video
             className={styles.video}
-            src={import.meta.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
+            src={import.meta.env.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
           ></video>
         ) : (
           <img
-            src={import.meta.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
+            src={import.meta.env.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
             alt="hello"
             className={styles.file}
           />

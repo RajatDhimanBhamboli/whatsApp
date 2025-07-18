@@ -6,7 +6,7 @@ const useGlobalStore = create((set) => ({
 
   getuser: async (userid) => {
     try {
-      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/getuser", {
+      const response = await fetch(import.meta.env.VITE_BACKEND_URL+"/api/auth/getuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
