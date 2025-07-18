@@ -140,7 +140,7 @@ const Nav = () => {
           data-tooltip-content="Profile"
         >
           <img
-            src={`http://localhost:8000/uploads/${dp}`}
+            src={import.meta.VITE_BACKEND_URL+`/uploads/${dp}`}
             className={styles.circle}
           ></img>
         </div>

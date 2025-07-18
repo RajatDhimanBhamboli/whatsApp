@@ -9,7 +9,7 @@ const Otp = () => {
   const token = localStorage.getItem("email");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/auth/Otp", {
+    const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/Otp", {
       method: "POST",
       headers: {
         Authorization: token,

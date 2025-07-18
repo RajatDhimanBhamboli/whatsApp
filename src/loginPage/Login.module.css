@@ -70,3 +70,7 @@ h2 {
   font-size: 14px;
   background: #008069;
 }
+.last{
+  display: flex;
+  justify-content: space-around;
+}

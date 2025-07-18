@@ -19,7 +19,7 @@ function Profile() {
     formData.append("profile", file);
 
     try {
-      const response = await fetch(`http://localhost:8000/upload${userid}`, {
+      const response = await fetch(import.meta.VITE_BACKEND_URL+`/upload${userid}`, {
         method: "POST",
         body: formData,
       });
@@ -52,7 +52,7 @@ function Profile() {
       <div className={style.photo} onContextMenu={onRightClick}>
         <label htmlFor="dp">
           <img
-            src={`http://localhost:8000/uploads/${dp}`}
+            src={import.meta.VITE_BACKEND_URL+`/uploads/${dp}`}
             width="180px"
             height="180px"
             alt=""

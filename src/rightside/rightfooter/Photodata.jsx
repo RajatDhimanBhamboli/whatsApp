@@ -11,7 +11,7 @@ function Photodata({ photo, file, setphoto, setclick, setphototype }) {
     formData1.append("filehai", file);
     try {
       const response = await fetch(
-        `http://localhost:8000/dataupload/${userid}/${selectid}`,
+        import.meta.VITE_BACKEND_URL+`/dataupload/${userid}/${selectid}`,
         {
           method: "POST",
           body: formData1,

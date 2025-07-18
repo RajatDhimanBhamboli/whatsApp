@@ -8,7 +8,7 @@ const Checkemail = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/auth/checkemail", {
+    const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/checkemail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

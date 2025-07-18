@@ -7,7 +7,7 @@ function Chatclick2({ x, y, id, click, setclick, setclickd }) {
   async function deletedata() {
     alert("Clear Chat");
     try {
-      const response = await fetch("http://localhost:8000/api/auth/delete", {
+      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/delete", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,14 +36,7 @@ function Chatclick2({ x, y, id, click, setclick, setclickd }) {
       }}
     >
       <ul>
-        <li>Reply</li>
-        <li>Reply Message</li>
-        <li>Message +{name}</li>
-        <li>Copy</li>
-        <li>Forward</li>
-        <li>Pin</li>
-        <li>Star</li>
-        <li>Report</li>
+        
         <li onClick={() => deletedata()}>Delete</li>
       </ul>
     </div>

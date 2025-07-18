@@ -5,7 +5,7 @@ function Image({ image }) {
   return (
     <img
       className={styles.circle}
-      src={`http://localhost:8000/uploads/${image}`}
+      src={import.meta.VITE_BACKEND_URL+`/uploads/${image}`}
       width="100"
     />
   );

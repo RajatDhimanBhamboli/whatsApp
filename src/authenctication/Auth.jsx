@@ -1,13 +1,13 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import SignUp from "../signupPage/Signup";
 import Login from "../loginPage/Login";
 import { useNavigate } from "react-router-dom";
 import App from "../App";
-import style from "../authenctication/Auth.module.css";
 import Checkemail from "../reset password/Checkemail";
 import Otp from "../reset password/Otp";
 import Password from "../reset password/Password";
+
 function Auth() {
   const [isauth, setIsAuth] = useState(false);
   const [userid, setuserid] = useState("");
@@ -15,6 +15,7 @@ function Auth() {
   const [dp, setdp] = useState("");
 
   const navigate = useNavigate();
+
   useEffect(() => {
     const checkAuth = async () => {
       const token = localStorage.getItem("token");
@@ -23,20 +24,16 @@ function Auth() {
         return;
       }
       try {
-        const response = await fetch(
-          "http://localhost:8000/api/auth/check-auth",
-          {
-            method: "GET",
-            headers: {
-              Authorization: token,
-            },
-          }
-        );
+        const response = await fetch("http://localhost:8000/api/auth/check-auth", {
+          method: "GET",
+          headers: {
+            Authorization: token,
+          },
+        });
         const data = await response.json();
         if (response.ok) {
           setIsAuth(true);
           setuserid(data.userId);
-
           navigate("/app");
         } else {
           setIsAuth(false);
@@ -44,20 +41,19 @@ function Auth() {
           navigate("/login");
         }
       } catch (error) {
-        `                                                                                                                                                                                                                                                                              `;
         console.error("Error checking auth:", error);
         setIsAuth(false);
       }
     };
 
     checkAuth();
-  }, [isauth]);
+  }, []);
 
   useEffect(() => {
     if (!userid) return;
     const getname = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/auth/getdata", {
+        const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/getdata", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +61,6 @@ function Auth() {
           body: JSON.stringify({ userid }),
         });
         const data = await response.json();
-
         if (response.ok) {
           setdp(data.dp);
           setname(data.username);
@@ -77,7 +72,7 @@ function Auth() {
       }
     };
     getname();
-  }, [userid, dp]);
+  }, [userid]);
 
   return (
     <Routes>
@@ -85,7 +80,7 @@ function Auth() {
       <Route path="/Otp" element={<Otp />} />
       <Route path="/Password" element={<Password />} />
       <Route path="/forgot" element={<Checkemail />} />
-      <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
+      <Route path="/login" element={<Login setIsAuth={setIsAuth} userid={userid} />} />
       <Route
         path="/app"
         element={

@@ -21,7 +21,7 @@ function Password() {
       setError("");
       try {
         const response = await fetch(
-          "http://localhost:8000/api/auth/Password",
+          import.meta.VITE_BACKEND_URL+"/api/auth/Password",
           {
             method: "POST",
             headers: {

@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
-const Login = ({ setIsAuth }) => {
+import useGlobalStore from "../store";
+
+const Login = ({ setIsAuth ,userid}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+    const getuser = useGlobalStore((state) => state.getuser);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8000/api/auth/login", {
+      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -22,10 +26,14 @@ const Login = ({ setIsAuth }) => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("login successful! ");
+        alert("login successful!");
         localStorage.setItem("token", data.token);
-        navigate("/app");
+        console.log(data)
         setIsAuth(true);
+        console.log(userid);
+        getuser(data.userid);
+        navigate("/app");
+        
       } else {
         alert(data.message || "Signup failed!");
         setIsAuth(false);
@@ -40,7 +48,7 @@ const Login = ({ setIsAuth }) => {
   return (
     <div className={styles.container}>
       <div className={styles.loginBox}>
-        <h1 className={styles.h1}>Welcone to TalkBridge</h1>
+        <h1 className={styles.h1}>Welcome to TalkBridge</h1>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
@@ -65,9 +73,14 @@ const Login = ({ setIsAuth }) => {
             Login
           </button>
         </form>
-        <a className={styles.h2} href="/forgot">
-          forgot Password
-        </a>
+        <div className={styles.last}>
+          <a className={styles.h2} href="/forgot">
+            Forgot Password
+          </a>
+          <a className={styles.h2} href="/">
+            Sign Up
+          </a>
+        </div>
       </div>
     </div>
   );

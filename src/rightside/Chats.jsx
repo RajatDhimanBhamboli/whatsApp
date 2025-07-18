@@ -48,11 +48,11 @@ function Chats({ message, time, id, click, setclick, file, media }) {
         media == "video" ? (
           <video
             className={styles.video}
-            src={`http://localhost:8000/uploads/msgdata/${file}`}
+            src={import.meta.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
           ></video>
         ) : (
           <img
-            src={`http://localhost:8000/uploads/msgdata/${file}`}
+            src={import.meta.VITE_BACKEND_URL+`/uploads/msgdata/${file}`}
             alt="hello"
             className={styles.file}
           />

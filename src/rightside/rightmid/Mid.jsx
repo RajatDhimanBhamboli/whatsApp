@@ -69,7 +69,7 @@ function Mid({ click, setclick, setonline, isopen, phototype }) {
   useEffect(() => {
     if (!selectid) return;
     const getmsg = async () => {
-      const response = await fetch("http://localhost:8000/api/auth/allmsg", {
+      const response = await fetch(import.meta.VITE_BACKEND_URL+"/api/auth/allmsg", {
         method: "POST",
         headers: { "Content-Type": "Application/json" },
         body: JSON.stringify({ senderId: userid, receiverId: selectid }),

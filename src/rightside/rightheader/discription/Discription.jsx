@@ -19,7 +19,7 @@ function Discription({ setdiscription }) {
       <div className={style.main}>
         <img
           className={style.photo}
-          src={`http://localhost:8000/uploads/${filteredUser[0]?.dp}`}
+          src={import.meta.VITE_BACKEND_URL+`/uploads/${filteredUser[0]?.dp}`}
           alt=""
         />
         <div className={style.name}>{filteredUser[0]?.username}</div>
