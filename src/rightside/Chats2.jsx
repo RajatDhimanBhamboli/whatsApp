@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import styles from "./Chats2.module.css";
-import Chatclick from "../rightclick/chatclick.jsx";
+import Chatclick from "../rightclick/Chatclick.jsx";
 import Photoshow from "../photoshow/Photoshow.jsx";
 import { UserContext } from "../App.jsx";
 
