@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { io } from "socket.io-client";
-import Nav from "./leftnav/nav.jsx";
+import Nav from "./leftnav/Nav.jsx";
 import Chating from "./chatlist/Chating.jsx";
 import styles from "./App.module.css";
 import Status from "./links/Status.jsx";
