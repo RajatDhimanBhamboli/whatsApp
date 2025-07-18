@@ -24,7 +24,7 @@ function Auth() {
         return;
       }
       try {
-        const response = await fetch("http://localhost:8000/api/auth/check-auth", {
+        const response = await fetch(VITE_BACKEND_URL+"/api/auth/check-auth", {
           method: "GET",
           headers: {
             Authorization: token,
