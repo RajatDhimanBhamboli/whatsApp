@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import List from "../list/list";
+import List from "../list/List.jsx";
 import styles from "./Chatbox.module.css";
 import { UserContext } from "../App";
 import { useContext } from "react";
